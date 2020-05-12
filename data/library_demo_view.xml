@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+        <record id="book_demo_1" model="library.book">
+            <field name="name">Odoo</field>
+            <field name="category">science</field>
+            <field name="quanatity">100</field>
+            <field name="auther">1</field>
+            <field name="page_num">500</field>
+        </record>
+
+        <record id="book_demo_2" model="library.book">
+            <field name="name">Laravel</field>
+            <field name="category">science</field>
+            <field name="quanatity">100</field>
+            <field name="auther">2</field>
+            <field name="page_num">500</field>
+        </record>
+
+
+    </data>
+
+</odoo>

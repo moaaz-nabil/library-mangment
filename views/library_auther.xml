@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Auther Tree  -->
+    <record id="library_auther_view_tree" model="ir.ui.view">
+        <field name="name"> Authers </field>
+        <field name="model">library.auther</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" string="Name" />
+                <field name="his_books" string="His Books" widget="many2many_tags" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- Auther Form -->
+    <record id="library_auther_view_form" model="ir.ui.view">
+        <field name="name">Authers</field>
+        <field name="model">library.auther</field>
+        <field name="arch" type="xml">
+            <form string="Auther">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="auther_pic" widget="image"> Auther Picture </field>
+                        </group>
+                        <group>
+                            <field name="name">Name</field>
+                            <field name="his_books" widget="many2many_tags">His Books</field>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>

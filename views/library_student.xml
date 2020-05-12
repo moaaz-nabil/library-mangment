@@ -1,0 +1,36 @@
+<odoo>
+
+    <!-- Student Tree View  -->
+    <record id="student_tree_view" model="ir.ui.view">
+        <field name="name">Student</field>
+        <field name="model">library.student</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="phone" />
+                <field name="student_id" />
+                <field name="his_borrowed_books"  widget="many2many_tags"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <!-- Student Form View -->
+    <record id="student_view_form" model="ir.ui.view">
+        <field name="name">Student</field>
+        <field name="model">library.student</field>
+        <field name="arch" type="xml">
+            <form string="Student">
+                <sheet>
+                    <group>
+                      <field name="name">Name</field>
+                      <field name="phone">Phone</field>  
+                      <field name="student_id">Student ID</field>  
+                      <field name="his_borrowed_books"  widget="many2many_tags">His Borroewed Books</field>  
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>

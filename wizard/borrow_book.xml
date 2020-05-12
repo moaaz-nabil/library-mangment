@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Borrow Book Wizard -->
+    <record id="library_borrow_view_form" model="ir.ui.view">
+        <field name="name">Borrow Book</field>
+        <field name="model">library.borrow</field>
+        <field name="arch" type="xml">
+            <form string="Borrow Book">
+                <sheet>
+                    <group>
+                        <field name="book" />
+                        <field name="student" />
+                        <field name="borrowed_date"
+                               string="Borrowed Date" />
+                                     
+                    </group>
+                    <footer>
+                        <button string="Borrow" 
+                                name="borrow_book" 
+                                type="object" 
+                                class="oe_highlight"/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Borrow Book Action -->
+    <record id="borrow_book_action" model="ir.actions.act_window">
+        <field name="name">Borrow Book</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">library.borrow</field>
+        <field name="view_type">form</field>
+        <field name="view_id" ref="library_borrow_view_form"/>
+        <field name="target">new</field>
+    </record>
+
+</odoo>

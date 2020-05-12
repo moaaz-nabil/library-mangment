@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!--Restore Wizrd Form  -->
+    <record id="library_restore_view_form" model="ir.ui.view">
+        <field name="name">Restore</field>
+        <field name="model">library.restore</field>
+        <field name="arch" type="xml">
+            <form string="Restore Book">
+                <sheet>
+                    <group>
+                        <field name="book_name">Book Name</field>
+                        <field name="student">Student</field>
+                        <field name="book_id">Book ID</field>
+                    </group>
+                    <footer>
+                        <button string="Restore"
+                                name="restore_book" 
+                                type="object" 
+                                class="oe_highlight"/>
+                        <button string="Cancel Restoring" 
+                                special= "cancel" 
+                                class="bt-secondary"/>        
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Wizard Action -->
+    <record id="library_restore_wizard_action" model="ir.actions.act_window">
+        <field name="name">Restore</field>
+        <field name="res_model">library.restore</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="library_restore_view_form"/>
+        <field name="target">new</field>
+    </record>
+
+</odoo>

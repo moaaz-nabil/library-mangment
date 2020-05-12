@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Borrowed Books Tree  -->
+    <record id="library_borroewd_books_tree" model="ir.ui.view">
+        <field name="name">Borrowed Books</field>
+        <field name="model">library.borrowed.books</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="book_id" />
+                <field name="category" />
+                <field name="auther" />
+                <field name="borrowed_date" string="Borrowed Date" />
+                <field name="expect_restore_date" string="Expect Restore Date" />
+                <field name="borrowed_days" string="Borrowed Days" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- Borrowed Books Form -->
+    <record id="library_borrowed_book_view_form" model="ir.ui.view">
+        <field name="name">Borrowed Books</field>
+        <field name="model">library.borrowed.books</field>
+        <field name="arch" type="xml">
+            <form string="Borrowed Books">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="book_pic" widget="image">Picture</field>
+                        </group>
+                        <group>
+                            <field name="name">Name</field>
+                            <field name="book_id" string="Book ID">Book ID</field>
+                            <field name="category">Category</field>
+                            <field name="auther" string="Auther">Auther</field>
+                            <field name="student" string= "Student" />
+                            <field name="borrowed_date">Borrowed Date</field>
+                            <field name="expect_restore_date">Expect Restore Date</field>
+                            <field name="borrowed_days">Borrowed Days</field>
+                        </group>
+                    </group>    
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,10 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_admin_book,Admin Book,model_library_book,library_admin_group,1,1,1,1
+access_admin_auther,Admin Auther,model_library_auther,library_admin_group,1,1,1,1  
+access_admin_student,Admin Student,model_library_student,library_admin_group,1,1,1,1  
+access_admin_borroewd_books,Admin Borrowed Books,model_library_borrowed_books,library_admin_group,1,1,1,1  
+access_admin_restored_books,Admin Restored Books,model_library_restored_books,library_admin_group,1,1,1,1  
+access_libririan_borroewd_books,Libririan Borrowed Books,model_library_borrowed_books,library_libriran_group,1,1,1,1  
+access_libririan_restored_books,Libririan Restored Books,model_library_restored_books,library_libriran_group,1,1,1,1  
+access_libririan_book,Libririan Book,model_library_book,library_libriran_group,1,0,0,0
+access_libririan_student,Libririan Student,model_library_student,library_libriran_group,1,0,0,0  

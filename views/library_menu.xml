@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Library Menu Action  -->
+    <!-- Library Book Action -->
+    <record id="library_book_action" model="ir.actions.act_window">
+        <field name="name">Books</field>
+        <field name="res_model">library.book</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">kanban,tree,form</field>
+    </record>
+
+    <!-- Library Auther Action -->
+      <record id="library_auther_action" model="ir.actions.act_window">
+        <field name="name">Authers</field>
+        <field name="res_model">library.auther</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Library Student Action -->
+    <record id="library_student_action" model="ir.actions.act_window">
+        <field name="name">Students</field>
+        <field name="res_model">library.student</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Borroewd Books Action -->
+    <record id="library_borroewd_books_action" model="ir.actions.act_window">
+        <field name="name">Borroewd Books</field>
+        <field name="res_model">library.borrowed.books</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Restored Books Action -->
+    <record id="library_restored_books_action" model="ir.actions.act_window">
+        <field name="name">Restored Books</field>
+        <field name="res_model">library.restored.books</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+
+    <!-- Library Menus -->
+    <menuitem
+        id="library_top_menu"
+        name="library"
+        string="Library"
+        sequence="0"/>
+
+    <!-- Book Menu  -->
+    <menuitem
+        id="library_book_menu"
+        name="Book"
+        action="library_book_action"
+        parent="library_top_menu"
+        sequence="0"/>
+    <!-- Auther Menu  -->
+    <menuitem
+        id="library_auther_menu"
+        name="Auther"
+        action="library_auther_action"
+        parent="library_top_menu"
+        sequence="1"/>
+    <menuitem
+        id="library_dtudent_menu"
+        name="Student"
+        action="library_student_action"
+        parent="library_top_menu"
+        sequence="2"/>
+    <menuitem
+        id="library_borrowed_books_menu"
+        name="Borroewd Books"
+        action="library_borroewd_books_action"
+        parent="library_top_menu"
+        sequence="3"/>
+    <menuitem
+        id="library_restored_books"
+        name="Restored Books"
+        action="library_restored_books_action"
+        parent="library_top_menu"
+        sequence="4"/>            
+
+</odoo>
