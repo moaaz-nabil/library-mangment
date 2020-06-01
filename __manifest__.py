@@ -43,4 +43,7 @@
         'data/library_demo_view.xml',
 
     ],
+    'license': 'AGPL-3',
+    'installable': True,
+    'application': False,
 }
