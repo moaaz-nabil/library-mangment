@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "library",
+    'name': "library-mangment",
     'version': '12.0.1.0.0',
     'summary': """
         Library Managment App""",
